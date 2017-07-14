@@ -1,0 +1,8 @@
+name: SoundEvent
+version: 1.0
+author: Lifeonblack
+main: org.sounds.SoundEvent
+commands:
+  soundevent:
+    description: main command for this plugin
+    aliases: [se]
