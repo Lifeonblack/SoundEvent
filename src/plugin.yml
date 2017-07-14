@@ -6,3 +6,7 @@ commands:
   soundevent:
     description: main command for this plugin
     aliases: [se]
+
+permissions:
+  soundevent.admin: {descritpion: to use admin command, default: false}
+  sound.play.*: {description: to be able to play all sounds, default: false}
