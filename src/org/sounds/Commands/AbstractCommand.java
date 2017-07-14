@@ -6,6 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.command.RemoteConsoleCommandSender;
 import org.bukkit.entity.Player;
+import org.sounds.Util.PlayerUtil;
 
 /**
  * Created by Raymart on 7/13/2017.
@@ -24,6 +25,14 @@ public abstract class AbstractCommand {
 
     public boolean isAuthorize() {
         return sender.hasPermission("soundevent.admin");
+    }
+
+    public void playNoPermissionSound(Player player) {
+        PlayerUtil.playSound(player, "NoPermission");
+    }
+
+    public Player getPlayer() {
+        return (Player) sender;
     }
 
     public boolean isSenderPlayer() {

@@ -16,6 +16,7 @@ public class ReloadCommand extends AbstractCommand {
     @Override
     public void execute(CommandSender sender, Command cmd, String label, String[] args) {
         if(!isAuthorize()) {
+            playNoPermissionSound(getPlayer());
             sendMessage(Util.colorize("&cYou have no permission to do that"));
             return;
         }
